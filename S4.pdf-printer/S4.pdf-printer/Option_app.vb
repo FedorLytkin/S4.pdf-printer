@@ -49,15 +49,19 @@ Public Class Option_app
 
         UserNameX_tb.Text = UserNameX
         UserNameY_tb.Text = UserNameY
+        UserName_Sign_Cb.Checked = Convert.ToBoolean(UserName_Sign)
 
         PrintTimeX_Tb.Text = PrintTimeX
         PrintTimeY_Tb.Text = PrintTimeY
+        PrintTimeX_Sign_Cb.Checked = Convert.ToBoolean(PrintTime_Sign)
 
         InvNumX_Tb.Text = InvNumX
         InvNumY_Tb.Text = InvNumY
+        InvNum_Sign_Cb.Checked = Convert.ToBoolean(InvNum_Sign)
 
         DatePodpX_Tb.Text = DatePodpX
         DatePodpY_Tb.Text = DatePodpY
+        DatePodp_Sign_Cb.Checked = Convert.ToBoolean(DatePodp_Sign)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -80,7 +84,7 @@ Public Class Option_app
 
         fileDel = get_reesrt_value("fileDel", Convert.ToString(False))
         ShtampCreate = get_reesrt_value("ShtampCreate", Convert.ToString(False))
-        add_SGN_INFO = get_reesrt_value("add_SGN_INFO", Convert.ToString(False))
+        add_SGN_INFO = get_reesrt_value("add_SGN_INFO", add_SGN_INFO)
 
         UserNameX = get_reesrt_value("UserNameX", UserNameX)
         UserNameY = get_reesrt_value("UserNameY", UserNameY)
